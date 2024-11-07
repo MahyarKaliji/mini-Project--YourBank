@@ -43,8 +43,8 @@ function applyTheme(theme) {
   htmlTag.className = theme;
   themeImg.src =
     theme === "light"
-      ? "./assets/images/icons/light-mode.svg"
-      : "./assets/images/icons/dark-mode.svg";
+      ? "assets/images/icons/light-mode.svg"
+      : "assets/images/icons/dark-mode.svg";
 }
 
 // Check the theme that saved on localStorage
