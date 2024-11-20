@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YourBank</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/input.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body class="font-Lexend dark:bg-grey10">
     <header class="lg:sticky top-0 z-20">
       <section
-        class="mt-10 lg:my-7.5 mx-4 lg:mx-20 py-3.5 pl-6 pr-3.5 border border-grey15 rounded-full bg-grey11 flex items-center justify-between fixed lg:relative left-0 top-0 right-0 mb-40 z-20"
+        class="mt-10 lg:my-7.5 mx-4 lg:mx-20 py-3.5 pl-6 pr-3.5 border border-grey15 rounded-full bg-grey11 flex items-center justify-between fixed lg:relative left-0 top-0 right-0 z-20"
       >
         <!-- Logo -->
         <div class="logo flex items-center md:basis-3/12 lg:basis-4/12">
           <div>
             <a
-              href="https://www.figma.com/design/CHqgXss54hJjb3W2YSQT0G/Banking-Company-Website-UI-Template-Design-in-Dark-Theme-(-FREE-Editable-)-(Community)?node-id=104-599&node-type=frame&t=Pn4wnKlzIZVRYbGc-0" target="_blank"
+              href="https://www.figma.com/design/CHqgXss54hJjb3W2YSQT0G/Banking-Company-Website-UI-Template-Design-in-Dark-Theme-(-FREE-Editable-)-(Community)?node-id=104-599&node-type=frame&t=Pn4wnKlzIZVRYbGc-0"
+              target="_blank"
             >
               <svg
                 width="26"
@@ -50,7 +55,8 @@
           </div>
           <div>
             <a
-              href="https://www.figma.com/design/CHqgXss54hJjb3W2YSQT0G/Banking-Company-Website-UI-Template-Design-in-Dark-Theme-(-FREE-Editable-)-(Community)?node-id=104-599&node-type=frame&t=Pn4wnKlzIZVRYbGc-0" target="_blank"
+              href="https://www.figma.com/design/CHqgXss54hJjb3W2YSQT0G/Banking-Company-Website-UI-Template-Design-in-Dark-Theme-(-FREE-Editable-)-(Community)?node-id=104-599&node-type=frame&t=Pn4wnKlzIZVRYbGc-0"
+              target="_blank"
             >
               <svg
                 width="74"
@@ -135,12 +141,12 @@
               <div
                 class="px-6 py-1.5 lg:py-3 rounded-full lg:hover:bg-green60 lg:hover:text-grey11 md:hidden lg:block"
               >
-                <button type="button">Sign Up</button>
+                <a href="signUp.html" id="sign-up">Sign Up</a>
               </div>
               <div
                 class="px-6 py-1.5 lg:py-3 rounded-full lg:hover:bg-green60 lg:hover:text-grey11 md:hidden lg:block"
               >
-                <button type="button">Login</button>
+                <a href="login.html">Login</a>
               </div>
               <div
                 class="pl-6 pr-3 py-1.5 rounded-full flex items-center justify-center"
@@ -162,7 +168,7 @@
           </div>
         </div>
 
-        <!-- Hamburger -->
+        <!-- Hamburger Menu -->
         <div
           id="menu-button"
           class="bg-green60 w-14 h-10 rounded-full flex md:hidden justify-center items-center cursor-pointer"
@@ -176,7 +182,7 @@
 
     <!-- Hero Section -->
     <section
-      class="mt-40 mb-32 mx-4 lg:mx-0 flex flex-col lg:flex-row items-cente lg:items-start justify-center gap-20 lg:gap-25 relative lg:py-15 lg:pl-20 lg:pr-50"
+      class="mt-40 lg:mt-7.5 mb-32 mx-4 lg:mx-0 flex flex-col lg:flex-row items-cente lg:items-start justify-center gap-20 lg:gap-25 relative lg:py-15 lg:pl-20 lg:pr-50"
     >
       <!-- Abstract top -->
       <div class="fixed top-0 left-0 z-[-1]">
@@ -444,7 +450,9 @@
         class="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-5 lg:gap-[150px]"
       >
         <!-- Context -->
-        <div class="text-center lg:text-left flex flex-col items-start gap-2.5">
+        <div
+          class="text-center lg:text-left flex flex-col items-center lg:items-start gap-2.5"
+        >
           <!-- Heading -->
           <div>
             <h2
@@ -475,12 +483,12 @@
               class="hidden peer"
               type="radio"
               name="products"
-              id="individuals"
+              id="product-individuals"
               checked
             />
             <label
               class="block font-normal text-sm text-white px-4.5 py-2.5 rounded-full peer-checked:bg-green60 peer-checked:text-grey11 lg:w-36"
-              for="individuals"
+              for="product-individuals"
               >For Individuals</label
             >
           </div>
@@ -489,11 +497,11 @@
               class="hidden peer"
               type="radio"
               name="products"
-              id="businesses"
+              id="product-businesses"
             />
             <label
               class="block font-normal text-sm text-white px-4.5 py-2.5 rounded-full peer-checked:bg-green60 peer-checked:text-grey11 lg:w-36"
-              for="businesses"
+              for="product-businesses"
               >For Businesses</label
             >
           </div>
@@ -920,6 +928,593 @@
       </div>
     </section>
 
+    <!-- Our Features -->
+    <section class="mx-3 lg:mx-20 mb-20 flex flex-col gap-12.5 lg:gap-15">
+      <!-- Top Container -->
+
+      <!-- Context -->
+      <div
+        class="text-center lg:text-left flex flex-col items-center lg:items-start gap-2.5 lg:pr-[250px]"
+      >
+        <!-- Heading -->
+        <div>
+          <h2
+            class="font-medium text-[28px] lg:text-[38px] text-grey10 dark:text-white"
+          >
+            Our <span class="text-green60">Features</span>
+          </h2>
+        </div>
+
+        <!-- Paragraph -->
+        <div
+          class="font-light text-grey70 text-sm lg:text-base text-center lg:text-left"
+        >
+          <p>
+            Experience a host of powerful features at YourBank, including
+            seamless online banking, secure transactions, and personalized
+            financial insights, all designed to enhance your banking experience
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Container -->
+      <div
+        class="w-full flex flex-col lg:flex-row items-center lg:items-start justify-center gap-5"
+      >
+        <!-- Tabs -->
+        <div
+          class="w-full lg:w-auto overflow-x-scroll lg:overflow-x-visible scrollbar-hide p-5 bg-grey11 rounded-xl"
+        >
+          <div
+            id="tabs"
+            class="flex flex-nowrap justify-center items-center gap-5 w-max lg:flex-col"
+          >
+            <div class="w-max lg:w-full">
+              <input
+                type="radio"
+                class="hidden peer"
+                id="Online-Banking"
+                name="features"
+                checked
+              />
+              <label
+                for="Online-Banking"
+                data-button="online"
+                class="py-3.5 px-5 peer-checked:bg-grey10 text-white peer-checked:text-green60 rounded-full text-sm block border border-grey15 text-center w-max lg:w-full"
+                >Online Banking</label
+              >
+            </div>
+
+            <div class="w-max lg:w-full">
+              <input
+                type="radio"
+                class="hidden peer"
+                id="Financial-Tools"
+                name="features"
+              />
+              <label
+                for="Financial-Tools"
+                data-button="financial"
+                class="py-3.5 px-5 peer-checked:bg-grey10 text-white peer-checked:text-green60 rounded-full text-sm block border border-grey15 text-center w-max lg:w-full"
+                >Financial Tools</label
+              >
+            </div>
+
+            <div class="w-max lg:w-full">
+              <input
+                type="radio"
+                class="hidden peer"
+                id="Customer-Support"
+                name="features"
+              />
+              <label
+                for="Customer-Support"
+                data-button="support"
+                class="py-3.5 px-5 peer-checked:bg-grey10 text-white peer-checked:text-green60 rounded-full text-sm block border border-grey15 text-center w-max lg:w-full"
+                >Customer Support</label
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Our Features Items -->
+        <div id="contents" class="flex justify-center items-center">
+          <!-- Online Banking Items -->
+          <div id="online" class="block">
+            <div
+              class="flex lg:grid lg:grid-cols-2 flex-col justify-center items-center lg:items-stretch gap-5"
+            >
+              <!-- Item 01 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">24/7 Account Access</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Enjoy the convenience of accessing your accounts anytime,
+                  anywhere through our secure online banking platform. Check
+                  balances, transfer funds, and pay bills with ease.
+                </p>
+              </div>
+
+              <!-- Item 02 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Mobile Banking App</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Stay connected to your finances on the go with our
+                  user-friendly mobile banking app. Easily manage your accounts,
+                  deposit checks, and make payments from your smartphone or
+                  tablet.
+                </p>
+              </div>
+
+              <!-- Item 03 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Secure Transactions</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Rest assured knowing that your transactions are protected by
+                  industry-leading security measures. We employ encryption and
+                  multi-factor authentication to safeguard your financial
+                  information.
+                </p>
+              </div>
+
+              <!-- Item 04 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Bill Pay and Transfers</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Save time and avoid late fees with our convenient bill pay
+                  service. Set up recurring payments or make one-time transfers
+                  between your accounts with just a few clicks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial Tools Items -->
+          <div id="financial" class="hidden">
+            <div
+              class="flex lg:grid lg:grid-cols-2 flex-col justify-center items-center lg:items-stretch gap-5"
+            >
+              <!-- Item 01 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Payroll Management</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  A lot goes into managing a company's payroll, and making
+                  errors in this area is expensive. Once my company started to
+                  grow, I knew I couldn't handle my own payroll anymore.
+                </p>
+              </div>
+
+              <!-- Item 02 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Easy Billing</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Waiting for your vendors to pay their bills can make your
+                  business struggle. For some big suppliers, paying late is
+                  standard business practice and you may not be able to do
+                  anything about it other than to work with another company.
+                </p>
+              </div>
+
+              <!-- Item 03 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Accounting Software</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  While certain accounting software platforms have been
+                  considered top-of-the-line for many years, now newer software
+                  options are also becoming more popular. Before choosing
+                  accounting software for your company, look for features
+                  important to your business.
+                </p>
+              </div>
+
+              <!-- Item 04 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Budgeting Tools</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  One of the crucial ways a business can be successful is to
+                  maintain careful budgeting. Knowing what money is coming in
+                  and going out makes it easier to manage your cash flow and
+                  plan for upcoming months.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Support Items -->
+          <div id="support" class="hidden">
+            <div
+              class="flex lg:grid lg:grid-cols-2 flex-col justify-center items-center lg:items-stretch gap-5"
+            >
+              <!-- Item 01 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Problem solving skills</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Customers do not always self-diagnose their issues correctly.
+                  Often, it’s up to the support rep to take the initiative to
+                  reproduce the trouble at hand before navigating a solution.
+                </p>
+              </div>
+
+              <!-- Item 02 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Emotional intelligence</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  A great customer support representative knows how to relate to
+                  anybody, but they’re especially good with frustrated people.
+                  Instead of taking things personally, they intuitively
+                  understand where the other person is coming from and they know
+                  to both prioritize and swiftly communicate that empathy.
+                </p>
+              </div>
+
+              <!-- Item 03 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">Clear communication skills</h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Your customer support team is on the front lines of problem
+                  solving for the product itself, and serves as a kind of
+                  two-pronged bullhorn. On one side, they’ll be the voice of
+                  your company to your customers.
+                </p>
+              </div>
+
+              <!-- Item 04 -->
+              <div
+                class="flex flex-col justify-start items-center gap-5 p-7.5 border border-grey15 rounded-xl bg-grey11"
+              >
+                <div class="relative w-full">
+                  <h5 class="text-white text-lg">
+                    Ability to use positive language
+                  </h5>
+                  <div class="absolute top-0 right-0">
+                    <img src="./assets/images/icons/arrow.svg" alt="" />
+                  </div>
+                </div>
+                <p class="text-sm text-grey70 font-light">
+                  Effective customer service means having the ability to make
+                  minor changes in your conversational patterns. This can truly
+                  go a long way in creating happy customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Testimonials -->
+    <section
+      class="mx-4 lg:mx-20 flex flex-col items-center justify-center gap-10 lg:gap-20 mb-20"
+    >
+      <!-- Top Container -->
+      <div
+        class="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-5 lg:gap-[150px]"
+      >
+        <!-- Context -->
+        <div
+          class="text-center lg:text-left flex flex-col items-center lg:items-start gap-2.5"
+        >
+          <!-- Heading -->
+          <div>
+            <h2
+              class="font-medium text-[28px] lg:text-[38px] text-grey10 dark:text-white"
+            >
+              Our <span class="text-green60">Testimonials</span>
+            </h2>
+          </div>
+
+          <!-- Paragraph -->
+          <div
+            class="font-light text-grey70 text-sm lg:text-base text-center lg:text-left"
+          >
+            <p>
+              Discover how YourBank has transformed lives with innovative
+              digital solutions and personalized customer service. See why our
+              clients trust us for a secure and prosperous financial journey
+            </p>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div
+          class="border border-grey15 bg-grey11 rounded-full p-3 flex items-center justify-center"
+        >
+          <div class="">
+            <input
+              class="hidden peer"
+              type="radio"
+              name="testimonials"
+              id="test-individuals"
+              checked
+            />
+            <label
+              class="block font-normal text-sm text-white px-4.5 py-2.5 rounded-full peer-checked:bg-green60 peer-checked:text-grey11 lg:w-36"
+              for="test-individuals"
+              >For Individuals</label
+            >
+          </div>
+          <div class="">
+            <input
+              class="hidden peer"
+              type="radio"
+              name="testimonials"
+              id="test-businesses"
+            />
+            <label
+              class="block font-normal text-sm text-white px-4.5 py-2.5 rounded-full peer-checked:bg-green60 peer-checked:text-grey11 lg:w-36"
+              for="test-businesses"
+              >For Businesses</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Container -->
+      <div
+        class="swiper testimonials-swiper flex flex-col items-center justify-center gap-7.5 w-full h-full relative"
+      >
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide p-5 flex flex-col items-center justify-center gap-7.5 border border-grey15 rounded-xl"
+          >
+            <!-- Icon -->
+            <div class="flex items-center justify-center gap-4">
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/comment-icon.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div>
+              <p class="text-sm font-normal text-grey70 text-center">
+                I recently started my own business, and YourBank has been
+                instrumental in helping me set up my business accounts and
+                secure the financing I needed. Their expert guidance and
+                tailored solutions have been invaluable.
+              </p>
+            </div>
+
+            <!-- User Name -->
+            <div class="text-base font-medium text-grey10 dark:text-green60 ">John D</div>
+          </div>
+          <div
+            class="swiper-slide p-5 flex flex-col items-center justify-center gap-7.5 border border-grey15 rounded-xl"
+          >
+            <!-- Icon -->
+            <div class="flex items-center justify-center gap-4">
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/comment-icon.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div>
+              <p class="text-sm font-normal text-grey70 text-center">
+                I recently started my own business, and YourBank has been
+                instrumental in helping me set up my business accounts and
+                secure the financing I needed. Their expert guidance and
+                tailored solutions have been invaluable.
+              </p>
+            </div>
+
+            <!-- User Name -->
+            <div class="text-base font-medium text-grey10 dark:text-green60 ">Linda</div>
+          </div>
+          <div
+            class="swiper-slide p-5 flex flex-col items-center justify-center gap-7.5 border border-grey15 rounded-xl"
+          >
+            <!-- Icon -->
+            <div class="flex items-center justify-center gap-4">
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/comment-icon.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div>
+              <p class="text-sm font-normal text-grey70 text-center">
+                I recently started my own business, and YourBank has been
+                instrumental in helping me set up my business accounts and
+                secure the financing I needed. Their expert guidance and
+                tailored solutions have been invaluable.
+              </p>
+            </div>
+
+            <!-- User Name -->
+            <div class="text-base font-medium text-grey10 dark:text-green60 ">James</div>
+          </div>
+          <div
+            class="swiper-slide p-5 flex flex-col items-center justify-center gap-7.5 border border-grey15 rounded-xl"
+          >
+            <!-- Icon -->
+            <div class="flex items-center justify-center gap-4">
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/comment-icon.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div>
+              <p class="text-sm font-normal text-grey70 text-center">
+                I recently started my own business, and YourBank has been
+                instrumental in helping me set up my business accounts and
+                secure the financing I needed. Their expert guidance and
+                tailored solutions have been invaluable.
+              </p>
+            </div>
+
+            <!-- User Name -->
+            <div class="text-base font-medium text-grey10 dark:text-green60 ">Louis Hoebregts</div>
+          </div>
+          <div
+            class="swiper-slide p-5 flex flex-col items-center justify-center gap-7.5 border border-grey15 rounded-xl"
+          >
+            <!-- Icon -->
+            <div class="flex items-center justify-center gap-4">
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/comment-icon.svg" alt="" />
+              </div>
+              <div>
+                <img src="./assets/images/icons/Line.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div>
+              <p class="text-sm font-normal text-grey70 text-center">
+                I recently started my own business, and YourBank has been
+                instrumental in helping me set up my business accounts and
+                secure the financing I needed. Their expert guidance and
+                tailored solutions have been invaluable.
+              </p>
+            </div>
+
+            <!-- User Name -->
+            <div class="text-base font-medium text-grey10 dark:text-green60 ">Mary K</div>
+          </div>
+        </div>
+
+        <!-- Sides Fade Effect -->
+        <div
+          class="absolute top-1/2 -translate-y-1/2 left-px bg-leftLightFade dark:bg-leftDarkFade z-5 h-5/6 w-24"
+        ></div>
+        <div
+          class="absolute top-1/2 -translate-y-1/2 right-px bg-rightLightFade dark:bg-rightDarkFade z-5 h-5/6 w-24"
+        ></div>
+
+        <!-- Swiper Hide Buttons -->
+        <div id="prev-btn" class="swiper-button-prev hidden opacity-50"></div>
+        <div id="next-btn" class="swiper-button-next hidden"></div>
+      </div>
+      <!-- Arrow Section -->
+      <div id="arrow-container" class="flex items-center justify-center gap-5">
+        <div
+          id="prev-arrow-btn"
+          class="bg-grey11 border border-grey15 rounded-full p-3 cursor-default"
+          data-slide="prev-btn"
+        >
+          <img
+            src="./assets/images/icons/left-arrow.svg"
+            alt=""
+            class="opacity-50"
+          />
+        </div>
+        <div
+          id="next-arrow-btn"
+          class="bg-grey11 border border-grey15 rounded-full p-3 cursor-pointer"
+          data-slide="next-btn"
+        >
+          <img
+            src="./assets/images/icons/right-arrow.svg"
+            alt=""
+            class="opacity-100"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer
       class="px-4 lg:px-20 pt-12 lg:pt-15 pb-7.5 flex flex-col items-center justify-center gap-7.5 lg:gap-10 bg-white97 dark:bg-grey11"
@@ -1101,6 +1696,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

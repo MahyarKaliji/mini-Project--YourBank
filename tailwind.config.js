@@ -46,7 +46,16 @@ module.exports = {
           "linear-gradient(to bottom, rgba(202, 255, 51, 1) 0%, rgba(202, 255, 51, 0) 100%)",
         innerGradient:
           "linear-gradient(to bottom, rgba(202, 255, 51, 1) 0%, rgba(202, 255, 51, 0) 47%)",
-      },
+        rightDarkFade:
+          "linear-gradient(to left, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0) 100%)",
+        leftDarkFade:
+          "linear-gradient(to left, rgba(25, 25, 25, 0) 0%, rgba(25, 25, 25, 1) 100%)",
+        rightLightFade:
+          "linear-gradient(to left, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 100%)",
+        leftLightFade:
+          "linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)",
+        loginBg: "url('../images/login-bg.png')",
+        },
       padding: {
         4.5: "18px",
         6.5: "26px",
@@ -67,6 +76,7 @@ module.exports = {
         4.5: "18px",
         6.5: "26px",
         7.5: "30px",
+        12.5: "50px",
         15: "60px",
         25: "100px",
         50: "200px",
@@ -93,5 +103,5 @@ module.exports = {
       textColor: ["dark"],
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };

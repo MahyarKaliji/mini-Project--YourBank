@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
+    <style>
+      label {
+        padding: 10px 20px;
+        border: 2px solid #000;
+        background-color: #ccc;
+        border-radius: 15px;
+      }
+      input[type="radio"]:checked + label {
+        background-color: black;
+        color: white;
+      }
+
+      .content {
+        display: none;
+      }
+      
+      .active {
+        display: block;
+      }
+
+      /* .checked {
+        display: block;
+        background-color: black;
+        color: white;
+        font-weight: 500;
+      } */
+
+      #contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        background-color: green;
+        padding: 30px;
+        color: white;
+        font-weight: 600;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="" style="overflow: auto; scrollbar-width: none; width: 100%">
+        <div
+          id="tabs"
+          style="
+            background-color: red;
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            padding: 0 20px;
+          "
+        >
+          <div
+            class=""
+            style="
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <input type="radio" id="Fist" name="items" checked style="display: none" />
+            <label for="First">First content</label>
+          </div>
+          <div
+            class=""
+            style="
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <input
+              type="radio"
+              id="Secod"
+              name="items"
+              style="display: none"
+            />
+            <label for="Second">Second content</label>
+          </div>
+          <div
+            class=""
+            style="
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <input type="radio" id="Thrd" name="items" style="display: none" />
+            <label for="Third">Third content</label>
+          </div>
+          <div
+            class=""
+            style="
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <input
+              type="radio"
+              
+              name="items"
+              style="display: none"
+            />
+            <label for="Fourth">Fourth content</label>
+          </div>
+          <div
+            class=""
+            style="
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <input type="radio" name="items" style="display: none" />
+            <label for="Fifth">Fifth content</label>
+          </div>
+          <div
+            class=""
+            style="
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <input type="radio" name="items" style="display: none" />
+            <label for="Sixth">Sixth content</label>
+          </div>
+        </div>
+      </div>
+      <div id="contents">
+        <div id="First" class="content active">First Content</div>
+        <div id="Second" class="content">Second Content</div>
+        <div id="Third" class="content">Third Content</div>
+        <div id="Fourth" class="content">Fourth Content</div>
+        <div id="Fifth" class="content">Fifth Content</div>
+        <div id="Sixth" class="content">Sixth Content</div>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script>
+      const buttons = document.querySelectorAll("#tabs label");
+      const contents = document.querySelectorAll("#contents div");
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          contents.forEach(content => content.classList.remove('active'));
+
+          const targetTab = btn.getAttribute("for");
+          const targetContent = document.querySelector(`#${targetTab}`);
+          targetContent.classList.add('active');
+          
+        })
+      })
+
+    </script>
+  </body>
+</html>
