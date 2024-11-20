@@ -41,6 +41,7 @@ signUpForm.addEventListener("submit", function (e) {
     localStorage.setItem("signupUsers", JSON.stringify(savedUsers));
     showSignupSuccess();
     signUpForm.reset();
+    rePasswordInput.parentElement.style.border = 'none'
   }
 });
 
