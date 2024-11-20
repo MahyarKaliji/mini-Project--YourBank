@@ -55,7 +55,7 @@ module.exports = {
         leftLightFade:
           "linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)",
         loginBg: "url('../images/login-bg.png')",
-        },
+      },
       padding: {
         4.5: "18px",
         6.5: "26px",
@@ -103,5 +103,18 @@ module.exports = {
       textColor: ["dark"],
     },
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    function ({ addUtilities }) {
+      const noSpinButton = {
+        ".no-spin-buttons": {
+          "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
+            "-webkit-appearance": "none",
+            margin: "0",
+          },
+        },
+      };
+      addUtilities(noSpinButton, ["responsive"]);
+    },
+  ],
 };

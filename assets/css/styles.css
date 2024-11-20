@@ -822,10 +822,6 @@ video {
   width: inherit;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1498,6 +1494,11 @@ video {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.no-spin-buttons::-webkit-outer-spin-button, .no-spin-buttons::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* fonts */
