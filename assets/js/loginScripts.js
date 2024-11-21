@@ -24,14 +24,12 @@ loginForm.addEventListener("submit", (e) => {
     (user) =>
       user.email === userEmail.value && user.password === passwordInput.value
   );
-  // let passwordIsCorrect = savedUsers.some((user) => user.password === passwordInput.value);
   if (!emailIsExist) incorrectUser();
   else {
     const userInfo = savedUsers.filter(
       (user) => user.email === userEmail.value
     )[0];
     showLoginSuccess(userInfo);
-    // console.log(userInfo);
 
     loginForm.reset();
   }
@@ -45,13 +43,10 @@ closeBtns.forEach((closeBtn) => {
 });
 
 function showLoginSuccess(u) {
-  // const savedUsers = JSON.parse(localStorage.getItem("signupUsers"));
-  // const userInfo = savedUsers.filter((user) => user.email === userEmail);
   
   const loginBox = document.querySelector("#login-text");
   loginBox.innerText = `Dear ${u.fname} ${u.lname}, welcome to your panel.`;
   loginBox.parentElement.classList.remove("hidden");
-  // console.log(u.fname + " " + u.lname);
   
 }
 

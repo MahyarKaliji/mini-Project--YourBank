@@ -77,7 +77,6 @@ const testimonialsSwiper = new Swiper(".testimonials-swiper.swiper", {
     },
     1024: {
       slidesPerView: 3,
-      // centeredSlides: true,
     },
   },
   navigation: {
