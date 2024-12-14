@@ -10,6 +10,9 @@ const rePasswordInput = document.querySelector(
   'input[data-input-password="repassword"]'
 );
 
+let passwordFlag = false;
+let reTypePasswordFlag = false;
+
 function Users(fname, lname, phone, email, password) {
   this.fname = fname;
   this.lname = lname;
@@ -41,7 +44,7 @@ signUpForm.addEventListener("submit", function (e) {
     localStorage.setItem("signupUsers", JSON.stringify(savedUsers));
     showSignupSuccess();
     signUpForm.reset();
-    rePasswordInput.parentElement.style.border = 'none'
+    rePasswordInput.parentElement.style.border = "none";
   }
 });
 
@@ -63,33 +66,35 @@ function showSignupSuccess() {
 }
 
 showHideBtn.addEventListener("click", () => {
-  if (passwordInput.type === "password") {
+  if (!passwordFlag) {
     passwordInput.type = "text";
-    showHideBtn.src = "http://127.0.0.1:5501/assets/images/icons/hidden.svg";
+    showHideBtn.src = "./assets/images/icons/hidden.svg";
+    passwordFlag = true;
   } else {
     passwordInput.type = "password";
-    showHideBtn.src = "http://127.0.0.1:5501/assets/images/icons/eye.svg";
+    showHideBtn.src = "./assets/images/icons/eye.svg";
+    passwordFlag = false;
   }
 });
 
 showHideReBtn.addEventListener("click", () => {
-  if (rePasswordInput.type === "password") {
+  if (!reTypePasswordFlag) {
     rePasswordInput.type = "text";
-    showHideReBtn.src = "http://127.0.0.1:5501/assets/images/icons/hidden.svg";
+    showHideReBtn.src = "./assets/images/icons/hidden.svg";
+    reTypePasswordFlag = true;
   } else {
     rePasswordInput.type = "password";
-    showHideReBtn.src = "http://127.0.0.1:5501/assets/images/icons/eye.svg";
+    showHideReBtn.src = "./assets/images/icons/eye.svg";
+    reTypePasswordFlag = false;
   }
 });
 
-
 // reType Password Checker
-rePasswordInput.addEventListener('input', (e) => {
+rePasswordInput.addEventListener("input", (e) => {
   if (e.target.value !== passwordInput.value) {
-  // console.log(e.target.value);
-  rePasswordInput.parentElement.style.border = "1px solid red"
-} else {
-    rePasswordInput.parentElement.style.border = "1px solid #CAFF33"
-
+    // console.log(e.target.value);
+    rePasswordInput.parentElement.style.border = "1px solid red";
+  } else {
+    rePasswordInput.parentElement.style.border = "1px solid #CAFF33";
   }
-})
+});
